@@ -1,0 +1,30 @@
+[
+   {
+      "id": 1,
+      "name": "Ilham",
+      "subject": "Kalkulus",
+      "age": 25,
+      "city": "Depok"
+   },
+   {
+      "id": 3,
+      "name": "Kim jeffry",
+      "subject": "pemain bola",
+      "age": "29",
+      "city": "Bogor"
+   },
+   {
+      "id": 5,
+      "name": "sugeng",
+      "subject": "rahayu",
+      "age": "22",
+      "city": "surabaya"
+   },
+   {
+      "id": 6,
+      "name": "budiman",
+      "subject": "atmoko",
+      "age": "22",
+      "city": "depok"
+   }
+]

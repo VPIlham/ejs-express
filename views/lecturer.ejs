@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lectures dan Student</title>
+    <style>
+        table {
+            width: 600px;
+        } th,
+        td {
+            padding: 8px;
+            text-align: center;
+        }
+        a {
+            text-decoration: none;
+            padding: 4px 8px;
+            color: white;
+            background-color: maroon;
+        }
+        a:hover {
+            color: maroon;
+            background-color: white;
+            border: 2px solid black;
+        }
+
+    </style>
+  </head>
+  <body>
+    <h1>Lecturers</h1>
+    <a href="/lecturers">Lectures</a>
+    <a href="/students">Student</a>
+    <hr />
+    <h3>Lecturers Page</h3>
+    <a href="/lecturers/create">Create</a>
+    <a href="/lecturers/edit">Edit</a>
+    <br>
+    <div>
+      <table border="1" cellspacing="0">
+        <thead>
+          <tr>
+            <th>id</th>
+            <th>name</th>
+            <th>subject</th>
+            <th>age</th>
+            <th>city</th>
+            <th>actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% lecturers.forEach(lecture => { %>
+          <tr>
+            <td><%= lecture.id %> </td>
+            <td><a href="/lecturers/information/<%= lecture.id %>" style="color :green;background-color: transparent;"><%= lecture.name %></a></td>
+            <td><%= lecture.subject %></td>
+            <td><%= lecture.age %></td>
+            <td><%= lecture.city %></td>
+            <td>
+              <a href="/lecturers/edit/<%= lecture.id %>">edit</a>
+              <a href="/lecturers/delete/<%= lecture.id %>">delete</a>
+            </td>
+          </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
